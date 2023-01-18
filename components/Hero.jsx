@@ -1,8 +1,17 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 
 export default function Hero() {
+  const [text, count] = useTypewriter({
+    words: [
+      "Проектная работа по теме «Веб-сайт с калькулятором разных экономических формул»",
+      "Подготовили ученики 11Д класса: Рустамов Каир, Малышев Владимир, Борискин Степан",
+    ],
+    loop: true,
+    delaySpeed: 2000,
+  });
   return (
     <div className="h-screen text-white flex flex-col items-center justify-center overflow-hidden">
       <BackgroundCircles />
@@ -17,9 +26,9 @@ export default function Hero() {
           duration: 2,
         }}
       >
-        <h1 className="text-center md:text-7xl text-xl font-bold max-w-6xl z-20">
-          Проектная работа по теме «Веб-сайт с калькулятором разных
-          экономических формул»
+        <h1 className=" text-xl md:text-5xl lg:text-6xl font-semibold px-10 max-w-5xl text-center">
+          <span className="mr-3">{text}</span>
+          <Cursor cursorColor="#F7AB0A" />
         </h1>
       </motion.div>
     </div>
