@@ -49,7 +49,7 @@ export default function Header() {
         <div className="md:hidden text-right" onClick={clickHandler}>
           sdfsdfs
         </div>
-        <div className="md:flex hidden justify-around text-white">
+        <div className="md:flex hidden justify-around text-white text-xl font-thin">
           <Link href={"#"}>Calc 1</Link>
           <Link href={"#"}>Calc 1</Link>
           <Link href={"#"}>Calc 1</Link>
